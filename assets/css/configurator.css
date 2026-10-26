@@ -1,0 +1,83 @@
+.o3d-configurator {
+  direction: rtl;
+  clear: both;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border: 1px solid #d8dce2;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.o3d-configurator h3 {
+  margin: 0 0 1rem;
+}
+
+.o3d-preview {
+  position: relative;
+  height: 320px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #f5f6f8;
+}
+
+.o3d-preview canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  cursor: grab;
+}
+
+.o3d-preview canvas:active {
+  cursor: grabbing;
+}
+
+.o3d-preview [data-o3d-preview-message] {
+  position: absolute;
+  inset: 45% 1rem auto;
+  margin: 0;
+  text-align: center;
+  pointer-events: none;
+}
+
+.o3d-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0.75rem 0;
+}
+
+.o3d-field input,
+.o3d-field select {
+  min-width: min(55%, 260px);
+  padding: 0.5rem;
+}
+
+.o3d-dimensions,
+.o3d-price-row {
+  margin: 0.75rem 0;
+}
+
+.o3d-error {
+  color: #b32d2e;
+}
+
+@media (max-width: 600px) {
+  .o3d-preview {
+    height: 240px;
+  }
+
+  .o3d-field {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .o3d-field input,
+  .o3d-field select {
+    width: 100%;
+    min-width: 0;
+  }
+}
